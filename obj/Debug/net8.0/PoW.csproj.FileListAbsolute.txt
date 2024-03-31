@@ -1,0 +1,14 @@
+/Users/thamirisadriano/Documents/fiap/blockchain/PoW/bin/Debug/net8.0/PoW
+/Users/thamirisadriano/Documents/fiap/blockchain/PoW/bin/Debug/net8.0/PoW.deps.json
+/Users/thamirisadriano/Documents/fiap/blockchain/PoW/bin/Debug/net8.0/PoW.runtimeconfig.json
+/Users/thamirisadriano/Documents/fiap/blockchain/PoW/bin/Debug/net8.0/PoW.dll
+/Users/thamirisadriano/Documents/fiap/blockchain/PoW/bin/Debug/net8.0/PoW.pdb
+/Users/thamirisadriano/Documents/fiap/blockchain/PoW/obj/Debug/net8.0/PoW.GeneratedMSBuildEditorConfig.editorconfig
+/Users/thamirisadriano/Documents/fiap/blockchain/PoW/obj/Debug/net8.0/PoW.AssemblyInfoInputs.cache
+/Users/thamirisadriano/Documents/fiap/blockchain/PoW/obj/Debug/net8.0/PoW.AssemblyInfo.cs
+/Users/thamirisadriano/Documents/fiap/blockchain/PoW/obj/Debug/net8.0/PoW.csproj.CoreCompileInputs.cache
+/Users/thamirisadriano/Documents/fiap/blockchain/PoW/obj/Debug/net8.0/PoW.dll
+/Users/thamirisadriano/Documents/fiap/blockchain/PoW/obj/Debug/net8.0/refint/PoW.dll
+/Users/thamirisadriano/Documents/fiap/blockchain/PoW/obj/Debug/net8.0/PoW.pdb
+/Users/thamirisadriano/Documents/fiap/blockchain/PoW/obj/Debug/net8.0/PoW.genruntimeconfig.cache
+/Users/thamirisadriano/Documents/fiap/blockchain/PoW/obj/Debug/net8.0/ref/PoW.dll
