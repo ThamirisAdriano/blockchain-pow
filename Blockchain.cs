@@ -4,10 +4,9 @@ using System.Text;
 
 public class Blockchain
 {
-    // Método para simular o Prova de Trabalho (PoW)
     public static int MineNonce(string transactionData, int difficulty)
     {
-        string prefix = new String('0', difficulty); // Define o critério para o hash (por exemplo, "00" para dificuldade 2)
+        string prefix = new String('0', difficulty);
         int nonce = 0;
 
         while (true)
@@ -17,6 +16,8 @@ public class Blockchain
 
             if (hash.StartsWith(prefix))
             {
+                Console.WriteLine($"Nonce encontrado: {nonce}");
+                Console.WriteLine($"Hash resultante: {hash}");
                 return nonce;
             }
 
@@ -24,14 +25,11 @@ public class Blockchain
         }
     }
 
-    // Função para computar o hash SHA-256 de uma entrada
     private static string ComputeSha256Hash(string input)
     {
         using (SHA256 sha256 = SHA256.Create())
         {
             byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(input));
-
-            // Converter byte array para string hexadecimal
             StringBuilder builder = new StringBuilder();
             for (int i = 0; i < bytes.Length; i++)
             {
@@ -41,4 +39,3 @@ public class Blockchain
         }
     }
 }
-

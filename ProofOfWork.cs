@@ -1,3 +1,7 @@
+using System;
+using System.Security.Cryptography;
+using System.Text;
+
 public class ProofOfWork
 {
     public static int FindNonce(string transactionData, string criteria)
@@ -8,18 +12,25 @@ public class ProofOfWork
             string hash = FakeHash(transactionData + nonce.ToString());
             if (hash.StartsWith(criteria))
             {
+                Console.WriteLine($"Nonce encontrado: {nonce}");
+                Console.WriteLine($"Hash resultante: {hash}");
                 return nonce;
             }
             nonce++;
         }
     }
 
-    // Simula uma função de hash. Em uma aplicação real, você usaria uma função de hash criptográfica, como SHA-256.
     public static string FakeHash(string input)
     {
-        // Retorna um 'hash' simplificado que simula o resultado de uma função de hash real.
-        // Este é apenas um placeholder para o conceito; não use em produção.
-        return BitConverter.ToString(new System.Security.Cryptography.SHA256Managed().ComputeHash(System.Text.Encoding.UTF8.GetBytes(input))).Replace("-", "");
+        using (SHA256 sha256 = SHA256.Create())
+        {
+            byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(input));
+            StringBuilder builder = new StringBuilder();
+            for (int i = 0; i < bytes.Length; i++)
+            {
+                builder.Append(bytes[i].ToString("x2"));
+            }
+            return builder.ToString();
+        }
     }
 }
-
